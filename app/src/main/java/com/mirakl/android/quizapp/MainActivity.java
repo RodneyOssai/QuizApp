@@ -7,6 +7,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -125,21 +126,31 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    /*
+        This function displays the questions they failed to the screen
+     */
+    public void displayFailed(String failedText){
+        TextView theyFailed = (TextView)findViewById(R.id.failed);
+        failedText = "You failed " + failed + " Try again";
+        theyFailed.setText(failedText); //Display the numbers they failed to screen
+
+    }
 
     public void submitQuiz(View v) {
         /*
-        Name
+        Get the name of the user
          */
         EditText nameField = (EditText) findViewById(R.id.player_name);
         String playerName = nameField.getText().toString();
 
-        gradingLogic();
+        gradingLogic(); // Call the function that performs the grading logic
 
         if (finalScore == 8) {
             Toast.makeText(getApplicationContext(), "Wow " + playerName + " !!! Perfect score of " + finalScore + "/8", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(getApplicationContext(), "Hey " + playerName + " you got" + finalScore + " questions right out of 8 questions", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Hey " + playerName + " you got " + finalScore + " questions right out of 8 questions", Toast.LENGTH_LONG).show();
         }
+        displayFailed(failed);
         finalScore = 0; // Reset finalScore value to 0 after displaying to user.
     }
 }
