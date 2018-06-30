@@ -1,15 +1,16 @@
 <resources>
     <string name="app_name">Quiz App</string>
     <string name="heading">A nice way to see how much you know about HTML.</string>
-    <string name="name_hint">Please enter your name to begin the quiz</string>
+    <string name="name_hint">Please enter your name</string>
 
     <string name="q1">1) What does HTML stand for?</string>
-    <string name="q1Ans_hint">Type In your response</string>
+    <string name="q1Ans_hint">Enter your response</string>
     <string name="q2">2) Choose the correct HTML element that gives you the largest heading</string>
     <string name="q3">3) How can you make a numbered list?</string>
     <string name="q4">4) How can you make a bulleted list?</string>
     <string name="q5">5) An  \u003Ciframe\u003E is used to display a web page within a web page.</string>
-    <string name="q6">6} How many HTML heading levels are there?</string>
-    <string name="q7">What HTML tags are used to create table rows and data cells. </string>
+    <string name="q6">6) How many HTML heading levels are there?</string>
+    <string name="q7">7) What HTML tags are used to create table rows and data cells. </string>
+    <string name="q8">8) Based on the src attribute, Reading the code what is the name of the file that would most probably load up the image beside it </string>
     <string name="submit">Submit</string>
 </resources>
