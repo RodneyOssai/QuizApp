@@ -130,10 +130,15 @@ public class MainActivity extends AppCompatActivity {
         This function displays the questions they failed to the screen
      */
     public void displayFailed(String failedText){
-        TextView theyFailed = (TextView)findViewById(R.id.failed);
+        TextView questionsUserFailed = (TextView)findViewById(R.id.failed);
         failedText = "You failed " + failed + " Try again";
-        theyFailed.setText(failedText); //Display the numbers they failed to screen
+        questionsUserFailed.setText(failedText); //Display the numbers they failed to screen
 
+
+    }
+    public void resetValues(){
+        finalScore = 0;
+        failed = "";
     }
 
     public void submitQuiz(View v) {
@@ -151,6 +156,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Hey " + playerName + " you got " + finalScore + " questions right out of 8 questions", Toast.LENGTH_LONG).show();
         }
         displayFailed(failed);
-        finalScore = 0; // Reset finalScore value to 0 after displaying to user.
+        resetValues(); // Reset finalScore value to 0 after displaying to user.
     }
 }
